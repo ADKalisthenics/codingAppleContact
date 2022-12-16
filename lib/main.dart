@@ -11,15 +11,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //create a widget
     return MaterialApp(
-      home: //Text('안녕')                                          //text widget
-            Icon(Icons.star)                                     //icon widget
-            //Image.asset('running.png')                           //image widget
-            //Container(width: 50, height:50, color: Colors.blue)  //box widget
-            //SizedBox()                                           //box widget
-            /*Center(
-              child:Container(width: 50, height:50, color: Colors.blue),  //box widget
-            )
-            */
+      home: Scaffold(               //Scaffold - divide 3 parts as header, body, bottom
+        appBar: AppBar(),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(Icons.star),
+            Icon(Icons.star),
+            Icon(Icons.star),
+          ],
+        ),
+        bottomNavigationBar: BottomAppBar(),
+      )
     );
   }
 }
