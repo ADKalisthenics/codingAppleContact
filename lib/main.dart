@@ -12,17 +12,22 @@ class MyApp extends StatelessWidget {
     //create a widget
     return MaterialApp(
       home: Scaffold(               //Scaffold - divide 3 parts as header, body, bottom
-        appBar: AppBar(),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Icon(Icons.star),
-            Icon(Icons.star),
-            Icon(Icons.star),
-          ],
+        appBar: AppBar(
+          title: Text('앱임')
         ),
-        bottomNavigationBar: BottomAppBar(),
+        body: Container(
+          child: Text('안녕')
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Icon(Icons.phone),
+              Icon(Icons.message),
+              Icon(Icons.contact_page),
+            ],
+          )
+        ),
       )
     );
   }
